@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title> 
+	<title>Insert title here</title>
 	<link rel="stylesheet" 
 		href="<c:url value="/assets/css/phonebook.css" />" />
 </head>
@@ -18,9 +18,10 @@
 	<h2>리스트</h2>
 
 	<p>등록된 전화번호 리스트입니다.</p>
-	
-	<c:forEach items='${list }" var="vo">
 
+
+	<c:forEach items="${list }" var="vo">
+	
 	<table border="1">
 		<tr>
 			<th>이름(name)</th>
@@ -42,6 +43,7 @@
 		</tr>
 
 	</table>
+	</c:forEach>
 	<br>
 
 	<a href="<c:url value="/write" />">추가번호 등록</a>

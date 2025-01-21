@@ -5,16 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import himedia.phonbook.repository.PhonebookDao;
 import himedia.phonbook.repository.PhonebookDaoImpl;
 import himedia.phonbook.repository.vo.PhonebookVo;
-
-
 
 @Service
 public class PhonebookServiceImpl implements PhonebookService {
 	
 	@Autowired
-	private 
+	private PhonebookDao phonebookDaoImpl;
 
 	@Override
 	public boolean insertPhonebook(PhonebookVo phonebookVo) {
@@ -42,7 +41,7 @@ public class PhonebookServiceImpl implements PhonebookService {
 
 	@Override
 	public List<PhonebookVo> selectPhonebookList() {
-		return PhonebookDaoImpl.selectAll();
+		return phonebookDaoImpl.selectAll();
 	}
 
 }

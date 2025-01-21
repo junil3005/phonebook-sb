@@ -14,13 +14,12 @@ import lombok.ToString;
 @NoArgsConstructor	//	기본 생성자
 @AllArgsConstructor	//	전체 생성자
 @Getter				//	Getters
-@Setter				//
-@ToString
+@Setter				//	Setters
+@ToString			//	toString
 public class PhonebookVo {
 	private Integer id;
 	private String name;
 	private String hp;
 	private String tel;
 	
-
 }

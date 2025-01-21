@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import himedia.phonbook.repository.vo.PhonebookVo;
 import himedia.phonebook.service.PhonebookService;
@@ -22,12 +23,11 @@ public class PhonebookController {
 	
 	@GetMapping("/")
 	public String list(Model model) {
-		List<PhonebookVo> list =
+		List<PhonebookVo> list = 
 				phonebookServiceImpl.selectPhonebookList();
 		logger.debug("PHONEBOOK LIST:" + list);
 		model.addAttribute("list", list);
 		return "phonebook/list";
-				
 	}
 	
 	//	게시물 작성 폼
@@ -38,8 +38,8 @@ public class PhonebookController {
 	
 	//	게시물 수정 폼
 	@GetMapping("/modify/{id}")
-	public String modifyForm(@PathVariable("id")) Integer id) {
+	public String modifyForm(
+			@PathVariable("id") Integer id) {
 		return "phonebook/modifyForm";
 	}
-
 }

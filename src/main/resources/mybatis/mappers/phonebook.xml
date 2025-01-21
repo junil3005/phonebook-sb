@@ -3,7 +3,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="himedia.phonebook.mappers.PhonebookMapper">
 	<select id="selectAll" resultType="phonebookVo">
-	SELECT * FROM phonebook ORDER BY id
+	SELECT * FROM phonebook ORDER BY id DESC
 	</select>
 
 </mapper>
