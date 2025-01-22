@@ -1,8 +1,8 @@
-package himedia.phonbook.repository;
+package himedia.phonebook.repository;
 
 import java.util.List;
 
-import himedia.phonbook.repository.vo.PhonebookVo;
+import himedia.phonebook.repository.vo.PhonebookVo;
 
 public interface PhonebookDao {
 	public int insert(PhonebookVo phonebookVo);
@@ -10,4 +10,4 @@ public interface PhonebookDao {
 	public int delete(Integer id);
 	public PhonebookVo selectOne(Integer id);
 	public List<PhonebookVo> selectAll();
-}
+} 

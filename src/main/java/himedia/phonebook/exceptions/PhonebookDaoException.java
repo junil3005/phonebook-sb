@@ -1,6 +1,6 @@
 package himedia.phonebook.exceptions;
 
-import himedia.phonbook.repository.vo.PhonebookVo;
+import himedia.phonebook.repository.vo.PhonebookVo;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,11 +9,16 @@ import lombok.Setter;
 public class PhonebookDaoException extends RuntimeException {
 	private PhonebookVo phonebookVo = null;
 
+	public PhonebookDaoException(String message, 
+								Throwable cause) {
+		super(message, cause);
+	}
 	public PhonebookDaoException(String message,
 								Throwable cause,
 								PhonebookVo vo) {
 		super(message, cause);
 		this.phonebookVo = vo;
 	}
+	
 	
 }

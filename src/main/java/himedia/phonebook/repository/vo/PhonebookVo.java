@@ -1,4 +1,4 @@
-package himedia.phonbook.repository.vo;
+package himedia.phonebook.repository.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,7 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/* id INTEGER AUTO_INCREMENT PRIMARY KEY,
+/*	
+ 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(10),
     hp VARCHAR(20),
     tel VARCHAR(20)
@@ -21,5 +22,5 @@ public class PhonebookVo {
 	private String name;
 	private String hp;
 	private String tel;
-	
+
 }
